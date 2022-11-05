@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradientsbackground"
+    tools:context=".ContactUsActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:background="@android:color/transparent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/rel_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:src="@drawable/back"
+                android:tint="@color/colorPrimary"
+                android:padding="@dimen/space_5"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"/>
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:id="@+id/tv_title"
+                android:text="Contact Us"
+                android:layout_toRightOf="@id/iv_back"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/skillsicons"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/space_20">
+
+
+            <EditText
+                android:id="@+id/et_name"
+                android:textColor="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:hint="Name"
+                android:background="@drawable/edit_text_border_layout"
+                android:backgroundTint="@color/white"
+                android:textSize="16dp"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColorHint="@color/colorAccent"
+
+                android:layout_height="40dp"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:textColor="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textSize="16dp"
+                android:background="@drawable/edit_text_border_layout"
+                android:paddingLeft="10dp"
+                android:backgroundTint="@color/white"
+                android:singleLine="true"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginTop="10dp"
+                android:layout_height="40dp"/>
+
+            <EditText
+                android:id="@+id/et_subject"
+                android:layout_width="match_parent"
+                android:hint="Subject"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/edit_text_border_layout"
+                android:layout_height="40dp"/>
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:hint="Message"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:padding="10dp"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginTop="10dp"
+                android:gravity="top"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/edit_text_border_layout"
+                android:layout_height="100dp"/>
+            <Button
+                android:id="@+id/btn_submit"
+                android:text="Submit "
+                android:textAllCaps="false"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+
+                android:background="@drawable/gradient1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

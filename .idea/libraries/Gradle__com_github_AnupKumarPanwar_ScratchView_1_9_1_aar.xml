@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.AnupKumarPanwar:ScratchView:1.9.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9510105fc53340df00508a90f10cd857/transformed/jetified-ScratchView-1.9.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9510105fc53340df00508a90f10cd857/transformed/jetified-ScratchView-1.9.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9510105fc53340df00508a90f10cd857/transformed/jetified-ScratchView-1.9.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.AnupKumarPanwar/ScratchView/1.9.1/c5cdec13648c8d8dafac17195a3d97fc9c4c29c/ScratchView-1.9.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

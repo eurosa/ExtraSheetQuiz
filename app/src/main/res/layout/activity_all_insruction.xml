@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.activities.AllInsructionActivity">
+    <include layout="@layout/toolbar_layout"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:id="@+id/no_of_ins"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/space_10"
+            android:text="No of Categories: 0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_add"
+            android:textColor="@color/white"
+            android:text="Add New Instruction"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/color_cancel"
+            android:background="@drawable/gradient_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/space_10"
+            android:paddingLeft="@dimen/space_10"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/space_10"
+            android:layout_height="35dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <include layout="@layout/no_items_layout"/>
+    </RelativeLayout>
+
+</LinearLayout>

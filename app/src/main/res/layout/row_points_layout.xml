@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_main"
+        android:layout_margin="@dimen/space_5"
+        app:cardCornerRadius="@dimen/space_5"
+        app:cardBackgroundColor="@color/rc_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/space_20"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_margin="@dimen/space_5"
+                    android:id="@+id/ivcoins"
+                    android:src="@drawable/icons8_coins_48px_1"
+                    android:layout_width="@dimen/space_30"
+                    android:layout_height="@dimen/space_30"/>
+                <TextView
+                    android:id="@+id/tv_points"
+                    android:layout_toRightOf="@+id/ivcoins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:paddingRight="@dimen/space_10"
+                    android:text="20"
+                    android:textStyle="italic|bold"
+                    android:textSize="25dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="@dimen/space_10"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_margin="@dimen/space_5"
+                    android:id="@+id/ivcoins2"
+                    android:src="@drawable/icons8_rupee_100px_3"
+                    android:layout_width="@dimen/space_30"
+                    android:layout_height="@dimen/space_30"/>
+                <TextView
+                    android:id="@+id/tv_amt"
+                    android:layout_toRightOf="@+id/ivcoins2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="20"
+                    android:paddingRight="@dimen/space_10"
+                    android:textStyle="italic|bold"
+                    android:textSize="25dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:src="@drawable/categories_image"/>
+
+    <EditText
+        android:fontFamily="@font/bold"
+        android:id="@+id/et_cat"
+        android:singleLine="false"
+        android:layout_margin="@dimen/space_10"
+        android:background="@drawable/edit_gray_border_layout"
+        android:hint="Category Name"
+        android:paddingLeft="@dimen/space_5"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        android:paddingBottom="@dimen/space_5"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/gradient_button_layout"
+            android:padding="12dp"
+
+            android:textAllCaps="false"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="Add"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_toRightOf="@id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/gradient_button_layout"
+            android:padding="12dp"
+            android:backgroundTint="#D50525"
+            android:textAllCaps="false"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="cancel"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

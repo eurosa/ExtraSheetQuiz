@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.upsun.quizz.Fonts.LatoBLack
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8.5"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_5"
+                android:paddingLeft="@dimen/space_15"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimary"
+
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_wallet"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/circleshape"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/hotlist_wish"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:contentDescription="bell"
+                            android:gravity="bottom"
+                            android:src="@drawable/icons8_wallet_100px"
+                            android:tint="@color/white" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/wallet_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="-8dp"
+                        android:layout_toRightOf="@id/rel_wallet"
+                        android:background="@drawable/xml_budget"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="0"
+                        android:textColor="#ffffff"
+                        android:textSize="9sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_rewards"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:background="@drawable/circleshape"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/hotlist_bell"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:contentDescription="bell"
+                            android:src="@drawable/icons8_gift_card_100px"
+                            android:tint="@color/white" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/reward_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="-8dp"
+                        android:layout_toRightOf="@id/rel_rewards"
+                        android:background="@drawable/xml_budget"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="00"
+                        android:textColor="#ffffff"
+                        android:textSize="9sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradientsbackground"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+
+        app:labelVisibilityMode="labeled"
+
+        app:menu="@menu/bottom_nav_menu" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_view"
+        android:layout_below="@+id/appbar" />
+
+</RelativeLayout>

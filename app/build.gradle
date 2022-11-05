@@ -1,0 +1,139 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+//        applicationId "com.upsun.quizz"
+        minSdkVersion 21
+        targetSdkVersion 33
+        multiDexEnabled true
+//        versionCode 18
+//        versionName "2.4"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Add config properties as build configs
+        rootProject.ext.config.each { p ->
+            if(p.key == 'APP_NAME'){
+                resValue 'string', p.key.toLowerCase(), p.value.replace("\"", "")
+            }
+            else if (p.key != 'VERSION_CODE' && p.key != 'VERSION_NAME' && p.key != 'APPLICATION_ID')
+                buildConfigField 'String', p.key, p.value
+        }
+    }
+
+    buildTypes {
+        debug {
+            versionNameSuffix ".dev"
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    def envConfig
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            envConfig = getProps("config/dev.properties")
+            applicationId envConfig.getProperty("APPLICATION_ID").replace("\"", "")
+            versionCode envConfig.VERSION_CODE.replace("\"", "").toInteger()
+            versionName envConfig.VERSION_NAME.replace("\"", "")
+        }
+        prod {
+            envConfig = getProps("config/prod.properties")
+            applicationId envConfig.getProperty("APPLICATION_ID").replace("\"", "")
+            versionCode envConfig.VERSION_CODE.replace("\"", "").toInteger()
+            versionName envConfig.VERSION_NAME.replace("\"", "")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation "com.ts:auth-control-sdk:5.1.1:arr"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material: 1.2.1'
+//    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.2.1'
+    implementation 'androidx.navigation:navigation-ui:2.2.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.android.gms:play-services-auth:20.3.0'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.github.armcha:SpaceNavigationView:1.6.0'
+    implementation 'com.mikhaellopez:circularprogressbar:3.0.3'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    //payment
+    implementation 'com.payumoney.core:payumoney-sdk:7.6.0'
+    implementation 'com.payumoney.sdkui:plug-n-play:1.6.0'
+
+    implementation 'com.razorpay:checkout:1.6.19'
+
+
+    // retrofit library
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // Retrofit API Interceptor for Debuging
+    // compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'androidx.work:work-runtime:2.5.0'
+    implementation 'androidx.room:room-runtime:2.3.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:21.0.1'
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:18.0.1'
+    implementation 'com.google.android.gms:play-services-ads:19.4.0'
+    implementation "com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0"
+    implementation('com.squareup.retrofit2:retrofit:2.9.0') {
+        // exclude Retrofit’s OkHttp dependency module and define your own module import
+        exclude module: 'okhttp'
+    }
+//    implementation "com.google.android.material:material:1.2.1"
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    annotationProcessor 'androidx.room:room-compiler:2.0.0'
+
+
+    implementation 'com.google.android.gms:play-services-safetynet:18.0.1'
+    implementation 'androidx.browser:browser:1.3.0'
+
+    implementation 'com.github.ixiDev:GDPRChecker:v0.2'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.3'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.AnupKumarPanwar:ScratchView:1.9.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    implementation 'com.hbb20:ccp:2.4.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    def work_version = "2.7.1"
+    implementation "androidx.work:work-runtime:$work_version"
+    // optional - Test helpers
+    androidTestImplementation "androidx.work:work-testing:$work_version"
+}

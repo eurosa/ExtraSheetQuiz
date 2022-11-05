@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.activities.QuizQuestionActivity">
+
+    <include layout="@layout/toolbar_layout"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+    <LinearLayout
+        android:layout_margin="@dimen/space_5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="@dimen/space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:text="Select Category "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/icons8_asterisk_48px_4"
+                android:layout_width="@dimen/space_8"
+                android:layout_height="@dimen/space_8"/>
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/spin_cat"
+            android:layout_margin="@dimen/space_10"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:hint="Select Category"
+            android:textSize="14dp"
+            android:background="@drawable/edit_gray_border_layout"
+            android:singleLine="true"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/space_5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="@dimen/space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:text="Select Language "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/icons8_asterisk_48px_4"
+                android:layout_width="@dimen/space_8"
+                android:layout_height="@dimen/space_8"/>
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spin_lang"
+            android:layout_margin="@dimen/space_10"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:entries="@array/lang"
+            android:hint="Select Category"
+            android:textSize="14dp"
+            android:background="@drawable/edit_gray_border_layout"
+            android:singleLine="true"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/btn_add_questions"
+            android:text="Add Questions"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_marginRight="@dimen/space_10"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:background="@drawable/gradient_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ques"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <include layout="@layout/no_items_layout"/>
+    </RelativeLayout>
+
+</LinearLayout>

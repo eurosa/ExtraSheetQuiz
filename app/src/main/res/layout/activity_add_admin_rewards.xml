@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.activities.AddAdminRewardsActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/daily_weekly_button_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <RadioButton
+                    android:id="@+id/rd_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_flat_selector"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/space_16"
+                    android:paddingTop="@dimen/space_3"
+                    android:paddingRight="@dimen/space_16"
+                    android:paddingBottom="3dp"
+                    android:text="On Rank"
+                    android:textColor="@color/dark_black" />
+
+                <RadioButton
+                    android:id="@+id/rd_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_flat_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/space_16"
+                    android:paddingTop="3dp"
+                    android:paddingRight="@dimen/space_16"
+                    android:paddingBottom="3dp"
+                    android:text="On Range"
+                    android:textColor="@color/dark_black" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lin_rank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_10"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_10"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space_2">
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Select Rank " />
+
+                            <ImageView
+                                android:layout_width="@dimen/space_8"
+                                android:layout_height="@dimen/space_8"
+                                android:src="@drawable/icons8_asterisk_48px_4" />
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spin_rank"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="@dimen/space_10"
+                            android:background="@drawable/edit_gray_border_layout"
+                            android:hint="Select Category"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space_2">
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rewards " />
+
+                            <ImageView
+                                android:layout_width="@dimen/space_8"
+                                android:layout_height="@dimen/space_8"
+                                android:src="@drawable/icons8_asterisk_48px_4" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_reward"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="@dimen/space_8"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:layout_marginRight="@dimen/space_8"
+                            android:background="@drawable/edit_gray_border_layout"
+                            android:hint="Enter Rewards"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/space_5"
+                            android:singleLine="true"
+                            android:textSize="@dimen/space_12" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_10"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_10"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space_2">
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Select Rank From " />
+
+                            <ImageView
+                                android:layout_width="@dimen/space_8"
+                                android:layout_height="@dimen/space_8"
+                                android:src="@drawable/icons8_asterisk_48px_4" />
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spin_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="@dimen/space_10"
+                            android:background="@drawable/edit_gray_border_layout"
+                            android:hint="Select Rank"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space_2">
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Select Rank To " />
+
+                            <ImageView
+                                android:layout_width="@dimen/space_8"
+                                android:layout_height="@dimen/space_8"
+                                android:src="@drawable/icons8_asterisk_48px_4" />
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spin_end"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="@dimen/space_10"
+                            android:background="@drawable/edit_gray_border_layout"
+                            android:hint="Select End Rank"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space_2">
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rewards " />
+
+                            <ImageView
+                                android:layout_width="@dimen/space_8"
+                                android:layout_height="@dimen/space_8"
+                                android:src="@drawable/icons8_asterisk_48px_4" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_reward_range"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="@dimen/space_8"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:layout_marginRight="@dimen/space_8"
+                            android:background="@drawable/edit_gray_border_layout"
+                            android:hint="Enter Rewards"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/space_5"
+                            android:singleLine="true"
+                            android:textSize="@dimen/space_12" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/space_20"
+                android:background="@drawable/gradient_button_layout"
+                android:text="Add"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="All Rewards"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/space_22" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_20"
+                android:background="@color/gray"
+                android:paddingBottom="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_rewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <include layout="@layout/no_items_layout" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardUseCompatPadding="true"
+    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_button_layout"
+            >
+
+            <ImageView
+                android:id="@+id/categoryImageIv"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/categories_image"
+                android:scaleType="centerCrop"/>
+
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:layout_below="@+id/categoryImageIv"
+                android:id="@+id/categoryNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/dark_black"
+                android:hint="Category Name"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_marginBottom="@dimen/space_5"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+
+        </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+

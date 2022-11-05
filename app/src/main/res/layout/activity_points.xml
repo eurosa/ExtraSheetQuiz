@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PointsActivity">
+
+    <include layout="@layout/toolbar_layout"/>
+    <com.upsun.quizz.Fonts.LatoBLack
+        android:id="@+id/no_of_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+       android:padding="@dimen/space_5"
+        android:layout_margin="@dimen/space_2"
+
+        android:text="You can select your amount to be added accordingly " />
+    <RelativeLayout
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+       >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_points"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/space_2"
+            android:layout_marginRight="@dimen/space_2"
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent"/>
+        <include layout="@layout/no_items_layout"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

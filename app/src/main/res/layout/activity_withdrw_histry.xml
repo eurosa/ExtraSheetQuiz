@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WithdrwHistry"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:background="@android:color/transparent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/rel_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:src="@drawable/back"
+                android:tint="@color/colorPrimary"
+                android:padding="@dimen/space_5"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"/>
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:id="@+id/tv_title"
+                android:text="Withdraw History"
+                android:layout_toRightOf="@id/iv_back"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_withdrw"/>
+        <include layout="@layout/no_items_layout"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

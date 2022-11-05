@@ -1,0 +1,82 @@
+<resources>
+    <!--    <string name="app_name">UPSUN</string>-->
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="invalid_refer_code">Enter correct referral code or leave it blank</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="rupee"> \u20B9</string>
+
+    //required
+    <string name="show_adds">true</string>
+    <string name="req_name">Enter User Name</string>
+    <string name="req_mobile">Enter Mobile Number</string>
+    <string name="req_email">Enter Email ID</string>
+    <string name="req_pass">Enter Password</string>
+    <string name="req_con_pass">Enter Confirm Password</string>
+    <string name="match_pass">Password and Confirm must be matched</string>
+
+    //Invalid
+    <string name="inavalid_email">Inavalid Email ID</string>
+
+    //admin
+    //text
+    <string name="txt_active_user">Active Users</string>
+    <string name="txt_today_quiz">Todays Quiz</string>
+    <string name="txt_all_comig_quiz">All Upcoming Quiz</string>
+    <string name="txt_all_quiz">All Quiz</string>
+    <string name="txt_add_quiz">Add Quiz</string>
+    <string name="txt_no_items">No Items Found</string>
+    <string name="txt_delete_item">Are you sure want to delete this item</string>
+    <string name="txt_deactive">Deactive This user</string>
+    <string name="txt_active">Active This user</string>
+    <string name="txt_all_quiz_cat">"All Quiz Category"</string>
+    <string name="txt_add_quiz_cate">"Add New Quiz Category"</string>
+
+
+    //required
+    <string name="req_title">Enter Title</string>
+    <string name="req_desc">Enter Description</string>
+    <string name="req_entry_fee">Enter Entry Fee</string>
+    <string name="req_date">Enter Quiz Date</string>
+    <string name="req_start_time">Enter start Time</string>
+    <string name="req_end_time">Enter start Time</string>
+    <string name="req_no_pcnt">Enter No of participants</string>
+    <string name="req_no_ques">Enter No of questions</string>
+    <string name="req_cat_name">Enter Category Name</string>
+    <string name="req_ques">Enter Question</string>
+    <string name="req_a">Enter Option A</string>
+    <string name="req_b">Enter Option B</string>
+    <string name="req_c">Enter Option C</string>
+    <string name="req_d">Enter Option D</string>
+    <string name="req_ans">Select any answer choice</string>
+    <string name="req_amt">Enter some amount</string>
+    <string name="ins_txt">Before Starting the quiz, Please read insructions carefully : </string>
+    <string name="req_ins">Select any one instruction</string>
+    <string name="req_lang">Select Language</string>
+
+    <string name="select_cate">"Choose Quiz Category"</string>
+    <string name="already_attached">This device already registered with another mobile number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_product">Add Product</string>
+    <string name="update_reward">Update Reward</string>
+    <string name="all_products">All Products</string>
+    <string name="reward">Reward</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="true">UPSUN</string>
+
+    <string-array name="lang">
+        <item>English</item>
+        <item>Hindi</item>
+    </string-array>
+</resources>

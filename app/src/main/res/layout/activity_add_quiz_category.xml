@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.activities.AddQuizCategoryActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@drawable/back"
+            android:tint="@color/colorPrimary"
+            android:padding="@dimen/space_5"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:text="@string/txt_add_quiz_cate"
+            android:layout_toRightOf="@id/iv_back"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:id="@+id/tv_title"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/space_10"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/space_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="150dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="@dimen/space_2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:text="Select Quiz Category "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/icons8_asterisk_48px_4"
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"/>
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spin_cate"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:prompt="@string/select_cate"
+                android:layout_margin="@dimen/space_10"
+                android:hint="Select Category"
+                android:textSize="14dp"
+                android:background="@drawable/edit_gray_border_layout"
+                android:singleLine="true"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="@dimen/space_2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:text="Title "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/icons8_asterisk_48px_4"
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_marginLeft="@dimen/space_5"
+                android:hint="Enter Quiz Category"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/space_5"
+                android:textSize="@dimen/space_12"
+                android:background="@drawable/edit_gray_border_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_select"
+                android:layout_width="match_parent"
+                android:layout_height="360dp">
+                <RelativeLayout
+                    android:id="@+id/rl_image"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:text="Select An Image"
+                        android:textSize="@dimen/space_20"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/dark_black"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_selectedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    />
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/space_20"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/space_10"
+        android:background="@drawable/gradient_button_layout"
+        android:text="Add Quiz Category"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WithdrawRequest">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradientsbackground">
+        <ImageView
+            android:id="@+id/user_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/space_30"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/cashback"
+            android:tint="@color/white"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_marginLeft="@dimen/space_20"
+        android:layout_marginRight="@dimen/space_20"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="@dimen/space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:text="Select Payment Method "
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/space_15"
+                android:textColor="@color/dark_black"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/icons8_asterisk_48px_4"
+                android:layout_width="@dimen/space_8"
+                android:layout_height="@dimen/space_8"/>
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/spin_pay"
+            android:layout_margin="@dimen/space_10"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Select Payment Method"
+            android:textSize="14dp"
+            android:background="@drawable/edit_gray_border_layout"
+            android:singleLine="true"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_5"
+            android:textSize="@dimen/space_15"
+            android:text="Enter Points"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/space_20"
+            android:textColor="@color/textcolor"/>
+
+        <ImageView
+
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/icons8_asterisk_48px_4" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Amount"
+        android:textAlignment="gravity"
+        android:textSize="@dimen/space_18"
+        android:background="@color/white"
+        android:inputType="number"
+        android:fontFamily="@font/bold"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_20"
+        android:layout_marginRight="@dimen/space_20"
+        android:padding="@dimen/space_5"/>
+
+    <Button
+        android:id="@+id/btnRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/gradient_button_layout"
+        android:padding="12dp"
+        android:gravity="center"
+        android:text="Request"
+        android:fontFamily="@font/bold"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="16dp" />
+    <com.upsun.quizz.Fonts.LatoBLack
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_5"
+        android:textSize="@dimen/space_13"
+        android:text="Your withdrawal request will be sent to Admin ."
+        android:layout_marginLeft="@dimen/space_20"
+        android:textColor="@android:color/darker_gray"/>
+
+
+
+</LinearLayout>

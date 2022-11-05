@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientsbackground"
+    android:orientation="vertical"
+    tools:context=".PlayQuizActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rel_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/space_5"
+                android:src="@drawable/back"
+                android:tint="@color/colorPrimary" />
+
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_back"
+                android:gravity="center"
+                android:text="Play Quiz"
+                android:textAlignment="gravity"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rel_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="end"
+                        android:layout_margin="@dimen/space_10"
+                        android:background="@drawable/edit_text_border_layout"
+                        android:backgroundTint="@color/rec_r_blue"
+                        android:padding="@dimen/space_10">
+
+                        <com.upsun.quizz.Fonts.LatoBLack
+                            android:id="@+id/ques_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_vertical"
+                            android:text="Ques1"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/quizname"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_toLeftOf="@+id/rel_2"
+                        android:layout_toRightOf="@+id/rel_1"
+                        android:background="@drawable/edit_text_border_layout"
+                        android:backgroundTint="@color/rec_r_blue"
+                        android:fontFamily="@font/bungee_inline"
+
+                        android:gravity="center"
+                        android:text="Quiz Name"
+
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rel_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:layout_margin="@dimen/space_10"
+                        android:background="@drawable/edit_text_border_layout"
+                        android:backgroundTint="@color/rec_r_blue"
+                        android:padding="@dimen/space_10">
+
+                        <com.upsun.quizz.Fonts.LatoBLack
+                            android:id="@+id/quiz_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="end"
+                            android:gravity="center_vertical"
+                            android:text="00:00"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginRight="@dimen/space_10"
+                    android:layout_marginBottom="@dimen/space_10"
+                    app:cardBackgroundColor="@color/rec_r_blue"
+                    app:cardCornerRadius="@dimen/space_10"
+                    app:cardElevation="@dimen/space_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:layout_marginRight="@dimen/space_5"
+                        android:background="@drawable/edit_text_border_layout"
+                        android:backgroundTint="@color/white"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/space_15"
+                        android:paddingBottom="@dimen/space_15">
+
+                        <com.upsun.quizz.Fonts.LatoBLack
+                            android:id="@+id/question"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/space_5"
+                            android:textColor="@color/dark_black"
+                            android:textSize="@dimen/space_16" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_marginRight="@dimen/space_15"
+                android:background="@color/grey_5"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_5"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="@dimen/space_5"
+                app:cardElevation="@dimen/space_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+
+                    android:padding="@dimen/space_10">
+
+                    <LinearLayout
+                        android:id="@+id/lin_lang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_20"
+                        android:layout_marginRight="@dimen/space_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.upsun.quizz.Fonts.LatoBLack
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/space_5"
+                            android:text="Language :"
+                            android:textColor="@color/dark_black"
+                            android:textSize="@dimen/space_15" />
+
+                        <RadioButton
+                            android:id="@+id/english"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/white"
+                            android:checked="true"
+
+                            android:text="English" />
+
+                        <RadioButton
+                            android:id="@+id/hindi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/white"
+                            android:text="Hindi" />
+
+                    </LinearLayout>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginRight="@dimen/space_10"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="@dimen/space_5">
+
+                        <LinearLayout
+                            android:id="@+id/lin_a"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/rel_circle"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="6dp"
+                                android:background="@drawable/circleshape"
+                                android:backgroundTint="@color/rec_r_blue">
+
+                                <TextView
+                                    android:id="@+id/quiz_initial"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/coming_soon"
+                                    android:text="a"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/space_5"
+                                android:text="A."
+                                android:textColor="@color/dark_black"
+                                android:textSize="14dp"
+                                android:visibility="gone" />
+
+                            <androidx.appcompat.widget.AppCompatCheckedTextView
+                                android:id="@+id/opt_a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/space_5"
+                                android:textColor="@color/dark_black"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginRight="@dimen/space_10"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="@dimen/space_5">
+
+                        <LinearLayout
+                            android:id="@+id/lin_b"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/space_30"
+                                android:layout_height="@dimen/space_30"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="6dp"
+                                android:background="@drawable/circleshape"
+                                android:backgroundTint="@color/rec_r_blue">
+
+                                <TextView
+                                    android:id="@+id/quiz_b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/coming_soon"
+                                    android:text="b"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/space_5"
+                                android:text="B."
+                                android:textColor="@color/dark_black"
+                                android:textSize="14dp"
+                                android:visibility="gone" />
+
+                            <androidx.appcompat.widget.AppCompatCheckedTextView
+                                android:id="@+id/opt_b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/space_5"
+                                android:textColor="@color/dark_black"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginRight="@dimen/space_10"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="@dimen/space_5">
+
+                        <LinearLayout
+                            android:id="@+id/lin_c"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/rel_c"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="6dp"
+                                android:background="@drawable/circleshape"
+                                android:backgroundTint="@color/rec_r_blue">
+
+                                <TextView
+                                    android:id="@+id/quiz_c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/coming_soon"
+                                    android:text="c"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/space_5"
+                                android:text="C."
+                                android:textColor="@color/dark_black"
+                                android:textSize="14dp"
+                                android:visibility="gone" />
+
+                            <androidx.appcompat.widget.AppCompatCheckedTextView
+                                android:id="@+id/opt_c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/space_5"
+                                android:textColor="@color/dark_black"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginRight="@dimen/space_10"
+                        android:layout_marginBottom="@dimen/space_10"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="@dimen/space_5">
+
+                        <LinearLayout
+                            android:id="@+id/lin_d"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/rel_d"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="6dp"
+                                android:background="@drawable/circleshape"
+                                android:backgroundTint="@color/rec_r_blue">
+
+                                <TextView
+                                    android:id="@+id/quiz_d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/coming_soon"
+                                    android:text="d"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+
+                            <androidx.appcompat.widget.AppCompatCheckedTextView
+                                android:id="@+id/opt_d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/space_5"
+
+                                android:textColor="@color/dark_black"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/prev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/space_10"
+                    android:background="@drawable/white_button_layout"
+                    android:padding="@dimen/space_5"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:text="Go to Previous"
+                    android:textAllCaps="false"
+                    android:textColor="@color/rec_purple"
+                    android:textSize="@dimen/space_14" />
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_10"
+                    android:layout_marginBottom="@dimen/space_10"
+                    android:background="@drawable/white_button_layout"
+                    android:padding="@dimen/space_5"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:text="Save &amp; Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/rec_purple"
+                    android:textSize="@dimen/space_14" />
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/space_10"
+                    android:background="@drawable/white_button_layout"
+                    android:backgroundTint="@color/color_cancel"
+                    android:padding="@dimen/space_5"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:text="Clear"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/space_14" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/space_10"
+                android:background="@drawable/white_button_layout"
+                android:backgroundTint="@color/rec_purple"
+                android:src="@drawable/ic_navigate_next_black_24dp"
+                android:text="Finish"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_14" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone" />
+</LinearLayout>

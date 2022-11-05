@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".admin.activities.AddQuestionsActivity">
+    <RelativeLayout
+        android:id="@+id/rel_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@drawable/back"
+            android:tint="@color/colorPrimary"
+            android:padding="@dimen/space_5"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:id="@+id/tv_title"
+            android:text="Add Questions"
+            android:layout_toRightOf="@id/iv_back"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/rel_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="80dp"
+        android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ques"
+        android:layout_width="match_parent"
+        android:nestedScrollingEnabled="false"
+        android:layout_height="wrap_content"/>
+        <Button
+            android:layout_below="@id/rv_ques"
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/space_20"
+            android:text="Add Questions"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/gradient_button_layout"
+            />
+
+    </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

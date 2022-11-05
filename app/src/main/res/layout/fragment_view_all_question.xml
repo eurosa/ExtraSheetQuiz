@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.fragments.ViewAllQuestionFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:id="@+id/no_of_ques"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/space_10"
+            android:text="No of Questions: 0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_add_cat"
+            android:textColor="@color/white"
+            android:text="Add New Question"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/color_cancel"
+            android:background="@drawable/gradient_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/space_10"
+            android:paddingLeft="@dimen/space_10"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/space_10"
+            android:layout_height="35dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ques"
+            android:visibility="visible"
+            android:nestedScrollingEnabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rel_no_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/no_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/txt_no_items"
+                    android:fontFamily="@font/bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

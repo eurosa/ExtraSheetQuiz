@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.fragments.AddPointsManuallyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_2">
+
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number " />
+
+                <ImageView
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"
+                    android:src="@drawable/icons8_asterisk_48px_4" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/space_5"
+                android:layout_marginTop="@dimen/space_2"
+                android:background="@drawable/edit_gray_border_layout"
+                android:hint="Enter Title"
+                android:inputType="number"
+                android:paddingLeft="@dimen/space_5"
+                android:singleLine="true"
+                android:textSize="@dimen/space_12" />
+
+        </LinearLayout>
+
+        <Button
+
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/space_20"
+            android:background="@drawable/gradient_button_layout"
+            android:text="Add Questions"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:id="@+id/tv_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:background="@drawable/edit_gray_border_layout"
+            android:text="This user have 200 points in wallet"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_2">
+
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Amount" />
+
+                <ImageView
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"
+                    android:src="@drawable/icons8_asterisk_48px_4" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_amt"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/space_5"
+                android:layout_marginTop="@dimen/space_2"
+                android:background="@drawable/edit_gray_border_layout"
+                android:hint="Enter Amount"
+                android:inputType="number"
+                android:paddingLeft="@dimen/space_5"
+                android:singleLine="true"
+                android:textSize="@dimen/space_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_2">
+
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Points" />
+
+                <ImageView
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"
+                    android:src="@drawable/icons8_asterisk_48px_4" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_points"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/space_5"
+                android:layout_marginTop="@dimen/space_2"
+                android:background="@drawable/edit_gray_border_layout"
+                android:hint="Enter Points"
+                android:inputType="number"
+                android:paddingLeft="@dimen/space_5"
+                android:singleLine="true"
+                android:textSize="@dimen/space_12" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/space_20"
+            android:background="@drawable/gradient_button_layout"
+            android:backgroundTint="@color/green_500"
+            android:text="Add Questions"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

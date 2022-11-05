@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "1017127065583",
+    "firebase_url": "https://upsun-aef7e-default-rtdb.firebaseio.com",
+    "project_id": "upsun-aef7e",
+    "storage_bucket": "upsun-aef7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017127065583:android:1cd9c31b758abda452881a",
+        "android_client_info": {
+          "package_name": "com.upsun.quizz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017127065583-e8o9vaqsjaftudi0iadjcrgdllpurufa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.upsun.quizz",
+            "certificate_hash": "11089103ae2aadf61d43e6df61f416d9e91a72ec"
+          }
+        },
+        {
+          "client_id": "1017127065583-l7v2ut68gb90d53j65odbfd6a8jgubgu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.upsun.quizz",
+            "certificate_hash": "9b0300146ab82402a8ab03b76989926aa134c91d"
+          }
+        },
+        {
+          "client_id": "1017127065583-surmaer9eaidicasmbta6go5hrfr5565.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.upsun.quizz",
+            "certificate_hash": "b7cd3bc7270ce4edfb05644481ce38a3f8946173"
+          }
+        },
+        {
+          "client_id": "1017127065583-7isth6hl0mk1hu7bpd71tsa0fcavkfmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhTXtdPKYT70rGqEp78Vv-bUQYboH_lGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017127065583-7isth6hl0mk1hu7bpd71tsa0fcavkfmf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

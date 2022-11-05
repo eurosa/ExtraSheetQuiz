@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_5"
+        android:layout_marginTop="@dimen/space_5"
+        android:layout_marginRight="@dimen/space_5"
+        app:cardCornerRadius="@dimen/space_10">
+
+        <RelativeLayout
+            android:id="@+id/rel_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/rc_2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_5"
+                app:cardElevation="@dimen/space_10">
+
+                <LinearLayout
+                    android:id="@+id/lin_quiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:padding="@dimen/space_5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_prize"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="20dp"
+
+                            android:layout_marginRight="@dimen/space_5"
+                            android:background="@color/green_500"
+                            android:text="View Prizes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/space_10" />
+
+                        <com.upsun.quizz.Fonts.LatoBLack
+                            android:id="@+id/quiz_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/space_20"
+                            android:gravity="center_vertical"
+                            android:text="00:00"
+                            android:textColor="@color/dark_black"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+
+                            android:id="@+id/rel_bcl"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/circle_border_layout"
+                            android:backgroundTint="@color/badge_background_color"
+
+                            android:padding="@dimen/space_2">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/circle_border_layout"
+                                android:backgroundTint="@color/white"
+                                android:padding="@dimen/space_2">
+
+                                <RelativeLayout
+                                    android:id="@+id/rel_fcl"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:background="@drawable/circleshape"
+                                    android:backgroundTint="@color/badge_background_color">
+
+                                    <com.upsun.quizz.Fonts.LatoBLack
+                                        android:id="@+id/tv_sm"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:text="M"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/quizname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/space_10"
+                            android:fontFamily="@font/coming_soon"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/space_10"
+                            android:text="Quiz Name"
+
+                            android:textColor="@color/dark_black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:id="@+id/quiz_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:padding="@dimen/space_5"
+                        android:textColor="@color/dark_black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginRight="@dimen/space_20"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <com.upsun.quizz.Fonts.LatoBLack
+                            android:id="@+id/quiz_points"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/space_2"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/dark_black"
+                            android:textSize="12dp"
+                            tools:ignore="RtlCompat" />
+
+                        <com.upsun.quizz.Fonts.LatoBLack
+                            android:id="@+id/quiz_rewards"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right|end"
+                            android:paddingLeft="@dimen/space_2"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/dark_black"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:layout_marginRight="@dimen/space_20"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/pg_bar"
+                            style="@style/MyProgressBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_centerVertical="true"
+                            android:background="@color/rec_purple"
+                            android:progressTint="@color/rec_orange" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/space_2"
+                                android:text="Spots Left:"
+
+                                android:textColor="@color/dark_black"
+                                android:textSize="12dp" />
+
+                            <com.upsun.quizz.Fonts.LatoBLack
+                                android:id="@+id/spots"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_weight="2"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/space_2"
+                                android:text=""
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/dark_black"
+                                android:textSize="12dp"
+                                tools:ignore="RtlCompat" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ln_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="50dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <Button
+                            android:id="@+id/play"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="@dimen/space_5"
+                            android:layout_marginRight="@dimen/space_15"
+                            android:layout_weight="1"
+                            android:background="@color/rec_mint"
+                            android:text="Play"
+                            android:textAllCaps="false"
+                            android:textColor="@color/dark_black"
+                            android:textSize="@dimen/space_14"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/join"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="@dimen/space_5"
+                            android:layout_marginRight="@dimen/space_15"
+                            android:layout_weight="1"
+                            android:background="@color/rec_ice"
+                            android:text="Join"
+                            android:textAllCaps="false"
+                            android:textColor="@color/dark_black"
+                            android:textSize="@dimen/space_14" />
+
+                        <Button
+                            android:id="@+id/btn_ranks"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="@dimen/space_5"
+                            android:layout_marginRight="@dimen/space_15"
+                            android:layout_weight="1"
+                            android:background="@color/color_cancel"
+                            android:text="View Ranks"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/space_12" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

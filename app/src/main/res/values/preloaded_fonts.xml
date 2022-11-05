@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/adamina</item>
+        <item>@font/almendra_sc</item>
+        <item>@font/b612</item>
+        <item>@font/bungee_inline</item>
+        <item>@font/coming_soon</item>
+        <item>@font/dancing_script</item>
+    </array>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.fragments.AllCategoriesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@drawable/back"
+            android:tint="@color/colorPrimary"
+            android:padding="@dimen/space_5"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:text="All Categories"
+            android:layout_toRightOf="@id/iv_back"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:id="@+id/no_of_cat"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/space_10"
+            android:text="No of Categories: 0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_add_cat"
+            android:textColor="@color/white"
+            android:text="Add New Category"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/color_cancel"
+            android:background="@drawable/gradient_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/space_10"
+            android:paddingLeft="@dimen/space_10"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/space_10"
+            android:layout_height="35dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="100dp">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/rf_cat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cat"
+        android:visibility="visible"
+        android:nestedScrollingEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rel_no_items"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/no_items"
+                    android:layout_width="250dp"
+                    android:layout_height="300dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/txt_no_items"
+                    android:fontFamily="@font/bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

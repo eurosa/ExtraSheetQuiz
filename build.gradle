@@ -1,0 +1,68 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath 'com.google.gms:google-services:4.3.14'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+ext{
+    // Get the current flavor of the build Ex: dev, prod
+    flavor = getCurrentFlavor()
+    if(flavor.isEmpty()){
+        flavor = "dev"
+    }
+
+    // Read the .properties for config
+    config = getProps('config/' + flavor + '.properties')
+}
+
+def getProps(path) {
+    Properties props = new Properties()
+    props.load(new FileInputStream(file(path)))
+    return props
+}
+
+def getCurrentFlavor() {
+    Gradle gradle = getGradle()
+
+    def pattern = Pattern.compile("([A-Z][A-Za-z]+)(Release|Debug)")
+    def flavor = ""
+
+    gradle.getStartParameter().getTaskNames().any { name ->
+        Matcher matcher = pattern.matcher(name)
+        if (matcher.find()) {
+            flavor = matcher.group(1).toLowerCase()
+            return true
+        }
+    }
+    return flavor
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

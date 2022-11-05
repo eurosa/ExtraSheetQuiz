@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rel_pay"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/red_600">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:text="To activate your id please click here"
+        android:textColor="@color/white"
+        android:textSize="@dimen/space_16"
+        android:fontFamily="@font/bold"
+        android:paddingLeft="@dimen/space_5"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

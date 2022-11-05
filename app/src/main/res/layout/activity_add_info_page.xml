@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.activities.AddInfoPage">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:background="@android:color/transparent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/rel_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:src="@drawable/back"
+                android:tint="@color/colorPrimary"
+                android:padding="@dimen/space_5"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"/>
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:id="@+id/tv_title"
+                android:text="Add Pages"
+                android:layout_toRightOf="@id/iv_back"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_20">
+            <LinearLayout
+                android:padding="@dimen/space_2"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:text="Select Type "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/icons8_asterisk_48px_4"
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_marginLeft="@dimen/space_5"
+                android:background="@drawable/edit_gray_border_layout">
+
+                <Spinner
+                    android:id="@+id/spin_page_type"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:padding="@dimen/space_2"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:text="Title "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/icons8_asterisk_48px_4"
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_marginLeft="@dimen/space_5"
+                android:hint="Enter Title"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/space_5"
+                android:textSize="@dimen/space_12"
+                android:background="@drawable/edit_gray_border_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <LinearLayout
+                android:padding="@dimen/space_2"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:text="Content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/icons8_asterisk_48px_4"
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_marginLeft="@dimen/space_5"
+                android:hint="Enter Title"
+
+                android:paddingLeft="@dimen/space_5"
+                android:textSize="@dimen/space_12"
+                android:gravity="top"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="true"
+                android:background="@drawable/edit_gray_border_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+            <Button
+                android:id="@+id/btn_add_page"
+                android:text="Add Page"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_10"
+                android:textAllCaps="false"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:background="@drawable/gradient_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

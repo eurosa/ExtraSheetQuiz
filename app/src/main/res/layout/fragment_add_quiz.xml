@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.fragments.AddQuizFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/space_5"
+            android:src="@drawable/back"
+            app:tint="@color/colorPrimary" />
+
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back"
+            android:gravity="center"
+            android:text="@string/txt_add_quiz"
+            android:textAlignment="gravity"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_10"
+            android:orientation="vertical"
+            android:paddingBottom="170dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_2">
+
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Title " />
+
+                    <ImageView
+                        android:layout_width="@dimen/space_8"
+                        android:layout_height="@dimen/space_8"
+                        android:src="@drawable/icons8_asterisk_48px_4" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:background="@drawable/edit_gray_border_layout"
+                    android:hint="Enter Title"
+                    android:paddingLeft="@dimen/space_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/space_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_2">
+
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description " />
+
+                    <ImageView
+                        android:layout_width="@dimen/space_8"
+                        android:layout_height="@dimen/space_8"
+                        android:src="@drawable/icons8_asterisk_48px_4" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:background="@drawable/edit_gray_border_layout"
+                    android:gravity="start"
+                    android:hint="Enter Description"
+                    android:paddingLeft="@dimen/space_5"
+                    android:paddingTop="@dimen/space_5"
+                    android:singleLine="false"
+                    android:textSize="@dimen/space_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_2">
+
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quiz Date " />
+
+                    <ImageView
+                        android:layout_width="@dimen/space_8"
+                        android:layout_height="@dimen/space_8"
+                        android:src="@drawable/icons8_asterisk_48px_4" />
+                </LinearLayout>
+
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:background="@drawable/edit_gray_border_layout"
+                    android:gravity="start"
+                    android:hint="Select Date"
+                    android:paddingLeft="@dimen/space_5"
+                    android:paddingTop="@dimen/space_5"
+                    android:textSize="@dimen/space_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_2">
+
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quiz Start Time " />
+
+                    <ImageView
+                        android:layout_width="@dimen/space_8"
+                        android:layout_height="@dimen/space_8"
+                        android:src="@drawable/icons8_asterisk_48px_4" />
+                </LinearLayout>
+
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:id="@+id/tv_start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:background="@drawable/edit_gray_border_layout"
+                    android:gravity="start"
+                    android:hint="Select Start Time"
+                    android:paddingLeft="@dimen/space_5"
+                    android:paddingTop="@dimen/space_5"
+                    android:textSize="@dimen/space_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_2">
+
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quiz End Time " />
+
+                    <ImageView
+                        android:layout_width="@dimen/space_8"
+                        android:layout_height="@dimen/space_8"
+                        android:src="@drawable/icons8_asterisk_48px_4" />
+                </LinearLayout>
+
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:id="@+id/tv_end_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:background="@drawable/edit_gray_border_layout"
+                    android:gravity="start"
+                    android:hint="Select End Time"
+                    android:paddingLeft="@dimen/space_5"
+                    android:paddingTop="@dimen/space_5"
+                    android:textSize="@dimen/space_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_2">
+
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Entry Fee " />
+
+                    <ImageView
+                        android:layout_width="@dimen/space_8"
+                        android:layout_height="@dimen/space_8"
+                        android:src="@drawable/icons8_asterisk_48px_4" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_fee"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:background="@drawable/edit_gray_border_layout"
+                    android:hint="Enter Entry Fee"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:paddingLeft="@dimen/space_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/space_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_2">
+
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No. Of Participants " />
+
+                    <ImageView
+                        android:layout_width="@dimen/space_8"
+                        android:layout_height="@dimen/space_8"
+                        android:src="@drawable/icons8_asterisk_48px_4" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_no_ptcnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:background="@drawable/edit_gray_border_layout"
+                    android:hint="Enter no of participanets"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:paddingLeft="@dimen/space_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/space_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_2">
+
+                    <com.upsun.quizz.Fonts.LatoBLack
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No. Of Questions " />
+
+                    <ImageView
+                        android:layout_width="@dimen/space_8"
+                        android:layout_height="@dimen/space_8"
+                        android:src="@drawable/icons8_asterisk_48px_4" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_no_ques"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:background="@drawable/edit_gray_border_layout"
+                    android:hint="Enter no of questions"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:paddingLeft="@dimen/space_5"
+                    android:singleLine="true"
+                    android:textSize="@dimen/space_12" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_add_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="@dimen/space_10"
+                android:background="@drawable/gradient_button_layout"
+                android:text="Add Quiz"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

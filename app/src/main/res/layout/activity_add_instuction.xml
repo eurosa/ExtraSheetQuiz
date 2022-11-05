@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.activities.AddInstuctionActivity">
+
+    <include layout="@layout/toolbar_layout"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/space_20"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="@dimen/space_2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:text="Title "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/icons8_asterisk_48px_4"
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_marginLeft="@dimen/space_8"
+                android:layout_marginRight="@dimen/space_8"
+                android:hint="Enter Title"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/space_5"
+                android:textSize="@dimen/space_12"
+                android:background="@drawable/edit_gray_border_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="@dimen/space_2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.upsun.quizz.Fonts.LatoBLack
+                    android:text="Instructions "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/icons8_asterisk_48px_4"
+                    android:layout_width="@dimen/space_8"
+                    android:layout_height="@dimen/space_8"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/et_desc"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_marginLeft="@dimen/space_8"
+                android:layout_marginRight="@dimen/space_8"
+                android:hint="Enter Title"
+                android:layout_gravity="start"
+                android:padding="@dimen/space_5"
+                android:gravity="top"
+                android:singleLine="false"
+                android:paddingLeft="@dimen/space_5"
+                android:textSize="@dimen/space_12"
+                android:background="@drawable/edit_gray_border_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_margin="@dimen/space_20"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:text="Add Instruction"
+            android:background="@drawable/gradient_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

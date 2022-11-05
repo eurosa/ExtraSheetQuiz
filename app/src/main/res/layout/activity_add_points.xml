@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".admin.activities.AddPointsActivity">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="@dimen/space_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="@dimen/space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.upsun.quizz.Fonts.LatoBLack
+                android:text="Points "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/icons8_asterisk_48px_4"
+                android:layout_width="@dimen/space_8"
+                android:layout_height="@dimen/space_8"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/et_points"
+            android:layout_marginTop="@dimen/space_2"
+            android:layout_marginLeft="@dimen/space_5"
+            android:hint="Enter Points"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/space_5"
+            android:textSize="@dimen/space_12"
+            android:background="@drawable/edit_gray_border_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/space_5"
+        android:padding="@dimen/space_2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:text="Amount "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:src="@drawable/icons8_asterisk_48px_4"
+            android:layout_width="@dimen/space_8"
+            android:layout_height="@dimen/space_8"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_marginTop="@dimen/space_2"
+        android:layout_marginLeft="@dimen/space_5"
+        android:hint="Enter Amount"
+        android:singleLine="true"
+        android:paddingLeft="@dimen/space_5"
+        android:textSize="@dimen/space_12"
+        android:background="@drawable/edit_gray_border_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+</LinearLayout>
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_marginLeft="@dimen/space_20"
+        android:layout_marginRight="@dimen/space_20"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="Add Points"
+        android:background="@drawable/gradient_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+

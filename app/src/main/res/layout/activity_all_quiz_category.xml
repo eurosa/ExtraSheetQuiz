@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".admin.activities.AllQuizCategoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@drawable/back"
+            android:tint="@color/colorPrimary"
+            android:padding="@dimen/space_5"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:text="@string/txt_all_quiz_cat"
+            android:layout_toRightOf="@id/iv_back"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:id="@+id/tv_title"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.upsun.quizz.Fonts.LatoBLack
+            android:id="@+id/no_of_quiz_category"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/space_10"
+            android:text="No of Quiz Category: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_add_category"
+            android:textColor="@color/white"
+            android:text="Add New Quiz Category"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/color_cancel"
+            android:background="@drawable/gradient_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/space_10"
+            android:paddingLeft="@dimen/space_10"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/space_10"
+            android:layout_height="35dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <include layout="@layout/no_items_layout"/>
+    </RelativeLayout>
+</LinearLayout>
